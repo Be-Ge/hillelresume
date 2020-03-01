@@ -1,0 +1,155 @@
+$title-font: bold 30px 'Roboto', sans-serif;
+$color: #2ecc71;
+$title-color: #566366;
+$text-color: #919191;
+$main-text: normal 18px 'Roboto', sans-serif;
+$bg: #f2f2f1;
+$root-font-size: 10px;
+
+
+@function rem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+html {
+    font-size: $root-font-size;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    color: $text-color;
+}
+
+h2 {
+    color: $title-color;
+    font: $title-font;
+    text-transform: uppercase;   
+}
+
+.section__main {
+
+    display: flex;
+
+    &--bg {
+        width: 100%;
+        height: 1000px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background: url(../img/main.png);
+        background-size: cover;
+    }
+
+    &--title {
+        font-size: rem(60px);
+        color: #fff;
+        border: 1px solid #fff;
+        border-right: none;
+        border-left: none;
+        margin-bottom: rem(55px);
+
+    }
+
+    .learn {
+        text-decoration: none;
+        border: 1px solid white;
+        padding: rem(20px);
+        color: white;
+        font-weight: bold;
+        font-size: rem(18px);
+        text-transform: uppercase;
+    }
+
+    .learn:hover {
+        color: $color;
+        border: 1px solid $color;
+        transition: all .3s;
+    }
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #252e30;
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        &__title {
+            color: #fff;
+            text-transform: uppercase;
+
+            &-green {
+                color: $color;
+            }
+
+        }
+    }
+
+    .nav__menu {
+       
+        &-list {
+            list-style-type: none;
+            display: flex;
+        }
+
+        &-item {
+            color: #fff;
+            font-size: rem(16px);
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin: 0 rem(20px);
+            transition: all .3s;
+        }
+
+        &-item:hover {
+            color: $color;
+        }
+
+
+    }
+}
+
+.section__advantages {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about {
+    background: $bg;
+    display: flex;
+
+    &__box {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 5%;
+
+        &-abilities {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &-ability {
+            display: flex;
+        }
+
+        &-title {
+            color: $title-color;
+            font-size: rem(22px);
+            font-weight: bold;
+            text-transform: uppercase;   
+        }
+
+    }
+
+}
