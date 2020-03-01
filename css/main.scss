@@ -100,6 +100,7 @@ h3 {
     position: sticky;
     top: 0;
     height: rem(70px);
+    z-index: 1000;
 
     .logo {
         display: flex;
