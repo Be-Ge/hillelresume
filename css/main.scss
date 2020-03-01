@@ -273,8 +273,8 @@ h3 {
     }
 
     &__link:hover {
-        color: white;
-        border: 1px solid $color;
+        color: $text-color;
+        border: 1px solid $text-color;
         transition: all .3s;
     }
 
@@ -314,4 +314,59 @@ h3 {
     &__low {
         width: 70%;
     }
+}
+
+.resume {
+    background-color: $bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    padding: rem(100px) 0;
+
+
+    P {
+        width: 70%;
+
+        @media (max-width:768px) {
+            width: 90%;
+        }
+    }
+
+    &:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        border: 20px solid transparent; 
+        border-top: 20px solid $bg;
+        bottom: -35px;
+        left: 49%;
+    }
+
+    &__link {
+        display: inline-block;
+        text-decoration: none;
+        border: 1px solid $color;
+        padding: rem(20px);
+        margin: rem(15px) 0;
+        color: $color;
+        font-weight: bold;
+        font-size: rem(18px);
+        text-transform: uppercase;
+
+        @media (max-width:768px) {
+            width: 85%;
+            text-align: center;
+        }
+        
+    }
+
+    &__link:hover {
+        color: $text-color;
+        border: 1px solid $text-color;
+        transition: all .3s;
+    }
+
 }
