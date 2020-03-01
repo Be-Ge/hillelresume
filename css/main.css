@@ -12,6 +12,12 @@ h2 {
   text-transform: uppercase;
 }
 
+h3 {
+  font: normal bold 22px/24px "Roboto", sans-serif;
+  color: #566366;
+  text-transform: uppercase;
+}
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -266,12 +272,35 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin: 6.25rem 3.125rem;
+}
+
+@media (max-width: 768px) {
+  .skills {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 1.25rem 0;
+  }
 }
 
 .skills__text {
   width: 40%;
+}
+
+@media (max-width: 768px) {
+  .skills__text {
+    width: 90%;
+  }
 }
 
 .skills__link {
@@ -286,10 +315,64 @@ h2 {
   text-transform: uppercase;
 }
 
+@media (max-width: 768px) {
+  .skills__link {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .skills__link:hover {
   color: white;
   border: 1px solid #2ecc71;
   -webkit-transition: all .3s;
   transition: all .3s;
+}
+
+.skills__progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .skills__progress {
+    width: 90%;
+  }
+}
+
+.progress {
+  width: 100%;
+  background-color: #f2f2f1;
+}
+
+.progress span {
+  background-color: #2ecc71;
+  font: normal normal 18px/30px "Roboto", sans-serif;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 0.3125rem;
+}
+
+.progress__big {
+  width: 90%;
+}
+
+.progress__middle {
+  width: 80%;
+}
+
+.progress__low {
+  width: 70%;
 }
 /*# sourceMappingURL=main.css.map */

@@ -4,6 +4,7 @@ $title-color: #566366;
 $text-color: #919191;
 $main-text: normal normal 18px/30px 'Roboto', sans-serif;
 $bg: #f2f2f1;
+$h3:  normal bold 22px/24px 'Roboto', sans-serif;
 
 // funtion px to rem
 @function rem($size) {
@@ -23,6 +24,12 @@ h2 {
     color: $title-color;
     font: $title-font;
     text-transform: uppercase;   
+}
+
+h3 {
+    font: $h3;
+    color: $title-color;
+    text-transform: uppercase;
 }
 
 .container {
@@ -228,10 +235,23 @@ h2 {
 
 .skills {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin: rem(100px) rem(50px);
+
+    @media (max-width:768px) {
+        flex-direction: column;
+        margin:  rem(20px) 0;
+    }
+
 
     &__text {
         width: 40%;
+
+        @media (max-width:768px) {
+            width: 90%;
+        }
     }
 
     &__link {
@@ -244,6 +264,12 @@ h2 {
         font-weight: bold;
         font-size: rem(18px);
         text-transform: uppercase;
+
+        @media (max-width:768px) {
+            width: 100%;
+            text-align: center;
+        }
+        
     }
 
     &__link:hover {
@@ -252,4 +278,40 @@ h2 {
         transition: all .3s;
     }
 
+    &__progress {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        @media (max-width:768px) {
+            width: 90%;
+        }
+    }
+
+}
+
+.progress  {
+    width: 100%;
+    background-color: $bg;
+
+    span {
+        background-color: $color;
+        font: $main-text;
+        color: white;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: rem(5px);
+    }
+
+    &__big {
+        width: 90%;
+    }
+
+    &__middle {
+        width: 80%;
+    }
+
+    &__low {
+        width: 70%;
+    }
 }
