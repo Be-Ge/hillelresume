@@ -1,7 +1,3 @@
-html {
-  font-size: 10px;
-}
-
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -12,8 +8,13 @@ p {
 
 h2 {
   color: #566366;
-  font: bold 30px "Roboto", sans-serif;
+  font: normal bold 30px/24px "Roboto", sans-serif;
   text-transform: uppercase;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .section__main {
@@ -22,7 +23,7 @@ h2 {
   display: flex;
 }
 
-.section__main--bg {
+.section__main-bg {
   width: 100%;
   height: 1000px;
   display: -webkit-box;
@@ -38,17 +39,32 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url(../img/main.png);
+  background: url(../img/main.png) no-repeat;
   background-size: cover;
 }
 
-.section__main--title {
+@media (max-width: 768px) {
+  .section__main-bg {
+    height: 600px;
+    background-position-x: center;
+  }
+}
+
+.section__main-title {
   font-size: 3.75rem;
   color: #fff;
   border: 1px solid #fff;
   border-right: none;
   border-left: none;
   margin-bottom: 3.4375rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .section__main-title {
+    font-size: 1.5625rem;
+  }
 }
 
 .section__main .learn {
@@ -79,6 +95,10 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   background: #252e30;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 4.375rem;
 }
 
 .header .logo {
@@ -93,10 +113,18 @@ h2 {
 .header .logo__title {
   color: #fff;
   text-transform: uppercase;
+  margin-left: 1.25rem;
+  font: normal bold 30px/24px "Roboto", sans-serif;
 }
 
 .header .logo__title-green {
   color: #2ecc71;
+}
+
+@media (max-width: 768px) {
+  .header .nav__menu {
+    display: none;
+  }
 }
 
 .header .nav__menu-list {
@@ -130,11 +158,46 @@ h2 {
           justify-content: space-between;
 }
 
+@media (max-width: 768px) {
+  .section__advantages {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+.section__advantages-block {
+  width: 25rem;
+  margin: 9.375rem auto;
+}
+
+@media (max-width: 768px) {
+  .section__advantages-block {
+    width: 100%;
+    margin: 1.25rem auto;
+  }
+}
+
 .about {
   background: #f2f2f1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 768px) {
+  .about {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.about__img {
+  width: 100%;
 }
 
 .about__box {
@@ -149,6 +212,24 @@ h2 {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 5%;
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .about__box {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+.about__box-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 20px 0;
 }
 
 .about__box-abilities {
@@ -157,12 +238,21 @@ h2 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .about__box-ability {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 200px;
+  margin-left: 20px;
 }
 
 .about__box-title {
@@ -170,5 +260,36 @@ h2 {
   font-size: 1.375rem;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.skills__text {
+  width: 40%;
+}
+
+.skills__link {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #2ecc71;
+  padding: 1.25rem;
+  margin: 0.9375rem 0;
+  color: #2ecc71;
+  font-weight: bold;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+}
+
+.skills__link:hover {
+  color: white;
+  border: 1px solid #2ecc71;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 /*# sourceMappingURL=main.css.map */

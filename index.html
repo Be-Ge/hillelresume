@@ -8,21 +8,22 @@
 	<link rel="apple-touch-icon" href="img/favicon.png" sizes="50x50">
     <link rel="apple-touch-icon" href="img/favicon.png" sizes="72x72">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic,latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <section class="section__main">
-        <div class="section__main--bg container">
-            <h1 class="section__main--title">
+        <div class="section__main-bg">
+            <h1 class="section__main-title">
                 Web & Graphic Designer
             </h1>
             <a href="#" class="learn">Learn more</a>
         </div>
     </section>
-    <header class="header">
+    <header class="header container">
             <div class="logo">
                 <img src="img/favicon.png" alt="logo">
-                <div class="logo__title">FO <span class="logo__title-green">Cal</span></div>
+                <div class="logo__title">FO<span class="logo__title-green">Cal</span></div>
             </div>
             <nav class="nav__menu">
                 <ul class="nav__menu-list">
@@ -36,8 +37,7 @@
                 </ul>
             </nav>
     </header>
-    <img src="" alt="">
-    <section class="section__advantages">
+    <section class="section__advantages container">
         <div class="section__advantages-block">
             <h2 class="section__advantages-title">values</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium modi obcaecati, similique officia fugit sequi. Ullam explicabo aspernatur id ducimus, non consequatur hic maxime dignissimos quibusdam nihil natus voluptatem laboriosam?</p>
@@ -53,7 +53,7 @@
     </section>
 
     <section class="about">
-        <div class="img"><img src="img/about.png" alt="photo"></div>
+        <div><img class="about__img" src="img/about.png" alt="photo"></div>
         <div class="about__box">
             <div class="about__box-me">
                 <h2>About Me</h2>
@@ -61,45 +61,45 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi repudiandae neque cum voluptas distinctio porro placeat atque ad.</p>
             </div>
             <div class="about__box-abilities">
-                <div>
+                <div class="about__box-item"> 
+                    <img src="img/web.png" alt="icon">
                     <div class="about__box-ability" >
-                        <img src="img/web.png" alt="icon">
                         <div class="about__box-title">Web design</div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                     </div>
-                    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
                 </div>
-                <div>
-                    <div class="about__box-ability" >
+                <div class="about__box-item">
                     <img src="img/design.png" alt="icon">
+                    <div class="about__box-ability" >
                     <div class="about__box-title">graphic design</div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                     </div>
-                    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
                 </div>
-                <div>
+                <div class="about__box-item">
+                    <img src="img/market.png" alt="icon">
                     <div class="about__box-ability" >
-                        <img src="img/market.png" alt="icon">
                         <div class="about__box-title">online marketing</div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                     </div>
-                    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
                 </div>
-                <div>
+                <div class="about__box-item">
+                    <img src="img/seo.png" alt="icon">
                     <div class="about__box-ability" >
-                        <img src="img/seo.png" alt="icon">
                         <div class="about__box-title">SEO</div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                     </div>
-                    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="skills">
-        <div>
+    <section class="skills container">
+        <div class="skills__text">
             <h2>My skills</h2>
             <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat quia mollitia quisquam excepturi eum aut numquam tenetur est deleniti provident, corporis temporibus nostrum voluptates, aperiam quasi, veniam itaque fugiat maiores! </p>
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <a href="#contact">Contact Me</a>
+            <a class="skills__link" href="#contact">Contact Me</a>
         </div>
-        <div>
+        <div class=>
             <div>Photoshop</div>
             <div class="progress">
                 <span>%</span>
