@@ -344,7 +344,7 @@ h3 {
 
 @media (max-width: 768px) {
   .skills__progress {
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -418,6 +418,12 @@ h3 {
   left: 49%;
 }
 
+@media (max-width: 768px) {
+  .resume:after {
+    left: 45%;
+  }
+}
+
 .resume__link {
   display: inline-block;
   text-decoration: none;
@@ -448,12 +454,25 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 6.25rem auto;
+}
+
+.education__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  margin: 6.25rem auto;
+  border-bottom: 1px solid #919191;
+  padding-bottom: 3.125rem;
+  margin-bottom: 3.125rem;
 }
 
 .education__description {

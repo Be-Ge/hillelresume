@@ -286,7 +286,7 @@ h3 {
         width: 50%;
 
         @media (max-width:768px) {
-            width: 90%;
+            width: 100%;
         }
     }
 
@@ -345,6 +345,10 @@ h3 {
         border-top: 20px solid $bg;
         bottom: -35px;
         left: 49%;
+
+        @media (max-width:768px) {
+            left: 45%;
+        }
     }
 
     &__link {
@@ -375,9 +379,17 @@ h3 {
 
 .education {
     display: flex;
-    justify-content: space-around;
-    align-items: baseline;
+    flex-direction: column;
     margin: rem(100px) auto;
+
+    &__section {
+        display: flex;;
+        justify-content: space-around;
+        align-items: baseline;
+        border-bottom: 1px solid $text-color;
+        padding-bottom: rem(50px);
+        margin-bottom: rem(50px);
+    }
 
     &__description {
         width: 40%;
@@ -385,7 +397,6 @@ h3 {
 
     &__experience {
         width: 40%;
-        
 
         &-title {
             border-bottom: 1px solid $text-color;
