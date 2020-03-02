@@ -460,6 +460,10 @@ h3 {
   width: 40%;
 }
 
+.education__experience {
+  width: 40%;
+}
+
 .education__experience-title {
   border-bottom: 1px solid #919191;
   padding-bottom: 1.25rem;
