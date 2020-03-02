@@ -18,6 +18,7 @@ body {
 
 p {
     color: $text-color;
+    font: $main-text;
 }
 
 h2 {
@@ -370,4 +371,33 @@ h3 {
         transition: all .3s;
     }
 
+}
+
+.education {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    margin: rem(100px) auto;
+
+    &__description {
+        width: 40%;
+    }
+
+    &__experience {
+
+        &-title {
+            border-bottom: 1px solid $text-color;
+            padding-bottom: rem(20px);
+            margin-bottom: rem(20px);
+        }
+
+        &-gpa {
+            background-color: $color;
+            width: rem(80px);
+            text-align: center;
+            font: $main-text;
+            color: white;
+        }
+
+    }
 }
