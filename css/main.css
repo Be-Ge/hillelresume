@@ -157,6 +157,18 @@ h3 {
   color: #2ecc71;
 }
 
+.mob__menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mob__menu {
+    display: block;
+    font-size: 30px;
+    color: #f2f2f1;
+  }
+}
+
 .section__advantages {
   display: -webkit-box;
   display: -ms-flexbox;

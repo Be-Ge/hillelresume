@@ -151,9 +151,18 @@ h3 {
 }
 
 // burger
-@media (max-wisth: 768px) {
-    
+.mob__menu {
+    display: none;
+
+    @media (max-width: 768px) {
+        display: block;
+        font-size: 30px;
+        color: $bg;
+        
+    }
 }
+
+
 
 
 .section__advantages {
