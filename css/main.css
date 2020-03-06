@@ -250,6 +250,13 @@ h3 {
       -ms-flex-align: start;
           align-items: flex-start;
   margin: 20px 0;
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .about__box-item {
+    width: 100%;
+  }
 }
 
 .about__box-abilities {
@@ -273,6 +280,12 @@ h3 {
           flex-direction: column;
   width: 200px;
   margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .about__box-ability {
+    width: 100%;
+  }
 }
 
 .about__box-title {
